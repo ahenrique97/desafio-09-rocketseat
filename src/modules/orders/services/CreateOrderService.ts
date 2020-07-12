@@ -20,7 +20,6 @@ interface IRequest {
 @injectable()
 class CreateOrderService {
   constructor(
-<<<<<<< HEAD
     @inject('OrdersRepository')
     private ordersRepository: IOrdersRepository,
 
@@ -28,15 +27,10 @@ class CreateOrderService {
     private productsRepository: IProductsRepository,
 
     @inject('CustomersRepository')
-=======
-    private ordersRepository: IOrdersRepository,
-    private productsRepository: IProductsRepository,
->>>>>>> 719090f97b56ae58647cbb75b5d08580ce556913
     private customersRepository: ICustomersRepository,
   ) {}
 
   public async execute({ customer_id, products }: IRequest): Promise<Order> {
-<<<<<<< HEAD
     const customer = await this.customersRepository.findById(customer_id);
 
     if (!customer) {
@@ -75,9 +69,6 @@ class CreateOrderService {
     });
 
     return order;
-=======
-    // TODO
->>>>>>> 719090f97b56ae58647cbb75b5d08580ce556913
   }
 }
 

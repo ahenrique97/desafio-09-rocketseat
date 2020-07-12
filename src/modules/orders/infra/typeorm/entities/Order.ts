@@ -11,7 +11,6 @@ import {
 import Customer from '@modules/customers/infra/typeorm/entities/Customer';
 import OrdersProducts from '@modules/orders/infra/typeorm/entities/OrdersProducts';
 
-<<<<<<< HEAD
 @Entity('orders')
 class Order {
   @PrimaryGeneratedColumn('uuid')
@@ -32,17 +31,6 @@ class Order {
   created_at: Date;
 
   @UpdateDateColumn()
-=======
-class Order {
-  id: string;
-
-  customer: Customer;
-
-  order_products: OrdersProducts[];
-
-  created_at: Date;
-
->>>>>>> 719090f97b56ae58647cbb75b5d08580ce556913
   updated_at: Date;
 }
 
